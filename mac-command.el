@@ -34,7 +34,7 @@
 		     (delete-frame) ('error (setq q t)))
 		 (if q (mac-command-quit-emacs pfx))))))
 
-(when IS-MAC
+(when (eq system-type 'darwin)
   ;; os hot key
   ;; set right command key of macOS
   (setq mac-command-modifier 'hyper mac-option-modifier 'meta)
